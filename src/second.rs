@@ -1,3 +1,15 @@
+/*
+    A slightly better implementation of a linked-list.
+
+    It now uses Option to describe an empty list as None,
+    and a non-empty list as Some<Box<Node<T>>>
+
+    It now uses Option methods such as take(), as_ref() and as_deref()
+    to access data in the the Option instead of mem::replace()
+
+    This implementation also works with generics.
+*/
+
 pub struct List<T> {
     head: Link<T>,
 }
