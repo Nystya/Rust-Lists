@@ -1,3 +1,30 @@
+/*
+    This file contains an implementation of an immutable linked-list
+    that exposes a functional-programming-like API. It uses
+    Arc to provide a thread-safe reference-counted implementation.
+
+    Ex:
+
+    1. 
+        L = 1 -> 2 -> 3
+
+    2.
+        L1 = append(L, 4)
+
+        L  =     1 -> 2 -> 3
+                 |
+        L1 = 4 ->|         
+    
+    3. 
+        L2 = tail(L).append(5)
+
+        L2 =     5 -> |
+                      |
+        L  =     1 -> 2 -> 3
+                 |
+        L1 = 4 ->|
+*/
+
 use std::sync::Arc;
 
 pub struct List<T> {
