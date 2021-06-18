@@ -1,3 +1,9 @@
+/*
+    A very bad implementation of a linked-list that only accepts i32.
+
+    Uses mem::replace and a very bad re-implementation of Option (aka Link enum)
+*/
+
 use std::mem;
 
 pub struct List {
